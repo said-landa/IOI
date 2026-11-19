@@ -18,6 +18,8 @@ int main(void) {
     int bestI = -1, bestJ = -1; // bestI and bestJ record which two trees form the opposite corners of the best rectangle. Both start at -1 to mean “no rectangle chosen yet.”
 
     static int treeOrder[20000]; //Each entry in treeOrder holds one integer—the index we use to look up a tree’s coordinates in x and y. The same tree can be fifth in the input and first when ordered from left to right.
+    static int treeAtX[64001];
+    for (int i = 0; i < nTrees; i++) treeAtX[x[i]] = i + 1; //Look up tree number i to retrieve its x-coordinate and that is the slot to use in treeAtX for saving tree i, but tree saved is i + 1.
 
     return 0;
 }
