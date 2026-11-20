@@ -19,7 +19,14 @@ int main(void) {
 
     static int treeOrder[20000]; //Each entry in treeOrder holds one integer—the index we use to look up a tree’s coordinates in x and y. The same tree can be fifth in the input and first when ordered from left to right.
     static int treeAtX[64001];
+    
     for (int i = 0; i < nTrees; i++) treeAtX[x[i]] = i + 1; //Look up tree number i to retrieve its x-coordinate and that is the slot to use in treeAtX for saving tree i, but tree saved is i + 1.
+    
+    int sortedCount = 0; //sortedCount tracks how many entries we've filled in treeOrder. It also gives us the next free index. The first tree we find goes into treeOrder[0]
+    
+    for (int xCoord = 0; xCord <= 64000; xCoord++) { //Scanning treeAtX from 0 through 64000 visits occupied coordinates in left-to-right order. The <= includes the last possible coordinate.
+
+    }
 
     return 0;
 }
