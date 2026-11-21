@@ -24,8 +24,8 @@ int main(void) {
     
     int sortedCount = 0; //sortedCount tracks how many entries we've filled in treeOrder. It also gives us the next free index. The first tree we find goes into treeOrder[0]
     
-    for (int xCoord = 0; xCord <= 64000; xCoord++) { //Scanning treeAtX from 0 through 64000 visits occupied coordinates in left-to-right order. The <= includes the last possible coordinate.
-
+    for (int xCoord = 0; xCoord <= 64000; xCoord++) { //Scanning treeAtX from 0 through 64000 visits occupied coordinates in left-to-right order. The <= includes the last possible coordinate.
+        if (treeAtX[xCoord] == 0) continue;
     }
 
     return 0;
